@@ -1,4 +1,4 @@
-# tfmod_vpc_rt
+# terraform_vpc_rt
 
 Terraform module to create VPC routing table in AWS
 
@@ -15,8 +15,8 @@ vpc_id: The ID of the VPC
 
 ## Dependency
 
-VPC <https://github.com/virsas/tfmod_vpc>
-IGW <https://github.com/virsas/tfmod_vpc_igw>
+VPC <https://github.com/virsas/terraform_vpc>
+IGW <https://github.com/virsas/terraform_vpc_igw>
 
 ## Terraform example
 
@@ -30,7 +30,7 @@ variable "vpc_rt_default" { default =  { name = "DefaultRoutingTable", block = "
 # VPC RT
 ######################
 module "vpc_rt" {
-  source = "github.com/virsas/tfmod_vpc_rt"
+  source = "github.com/virsas/terraform_vpc_rt"
   vpc_id  = module.vpc_main.id
   igw_id  = module.vpc_igw.id
   rt = var.vpc_rt_default
