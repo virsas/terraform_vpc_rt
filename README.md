@@ -30,7 +30,7 @@ variable "vpc_rt_default" { default =  { name = "DefaultRoutingTable", block = "
 # VPC RT
 ######################
 module "vpc_rt" {
-  source = "github.com/virsas/terraform_vpc_rt"
+  source = "git::https://github.com/virsas/terraform_vpc_rt.git?ref=v1.0.0"
   vpc_id  = module.vpc_main.id
   igw_id  = module.vpc_igw.id
   rt = var.vpc_rt_default
